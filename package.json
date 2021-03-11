@@ -1,0 +1,11 @@
+{
+    "name": "com.jamesmdavis.core",
+    "version": "1.0.0",
+    "displayName": "Core",
+    "description": "Core Library for Unity",
+    "author": {
+      "name": "James Davis",
+      "email": "jamesmdavis95@gmail.com"
+    },
+    "unity": "2020.1"
+  }
