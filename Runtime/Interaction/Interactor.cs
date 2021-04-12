@@ -5,18 +5,18 @@ namespace Core.Interaction
 {
     public class Interactor : MonoBehaviour
     {
-        public IInteractable CurrentInteractable { get; set; }
+        public IInteractable Interactable { get; set; }
         public List<IInteractable> Interactables { get; private set; }
 
         private void Start()
         {
-            CurrentInteractable = null;
+            Interactable = null;
             Interactables = new List<IInteractable>();
         }
 
         public void Interact()
         {
-            if(CurrentInteractable == null)
+            if(Interactable == null)
             {
                 if(Interactables.Count > 0)
                 {
@@ -25,7 +25,7 @@ namespace Core.Interaction
             }
             else
             {
-                CurrentInteractable.Interact(gameObject);
+                Interactable.Interact(gameObject);
             }
         }
     }
