@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,13 +7,6 @@ namespace Core.Aim
     {
         [SerializeField] public UnityEvent onAim;
 
-        public Dictionary<string, bool> Restrictions { get; set; }
-
-        protected virtual void Awake()
-        {
-            Restrictions = new Dictionary<string, bool>();
-        }
-
-        public abstract void Aim(Vector3 data);
+        public abstract void Aim();
     }
 }

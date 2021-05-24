@@ -1,9 +1,7 @@
-using UnityEngine;
-
 namespace Core.Aim
 {
     public interface IAimable
     {
-        void Aim(Vector3 data);
+        void Aim();
     }
 }
