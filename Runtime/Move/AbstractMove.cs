@@ -5,8 +5,8 @@ namespace Core.Move
 {
     public abstract class AbstractMove : MonoBehaviour, IMoveable
     {
-        [SerializeField] public UnityEvent onMove;
+        [SerializeField] public UnityEvent<Vector3> onMove;
 
-        public abstract void Move();
+        public abstract void Move(Vector3 inputs);
     }
 }

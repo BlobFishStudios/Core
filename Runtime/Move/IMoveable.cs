@@ -1,7 +1,9 @@
+using UnityEngine;
+
 namespace Core.Move
 {
     public interface IMoveable
     {
-        void Move();
+        void Move(Vector3 inputs);
     }
 }
