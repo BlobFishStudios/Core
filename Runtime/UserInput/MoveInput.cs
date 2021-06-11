@@ -5,7 +5,7 @@ namespace Core.UserInput
 {
     public class MoveInput : MonoBehaviour
     {
-        public UnityEvent onMoveInput;
+        public UnityEvent<Vector3> onMoveInput;
 
         private void FixedUpdate()
         {
@@ -16,7 +16,8 @@ namespace Core.UserInput
         {
             if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
-                onMoveInput?.Invoke();
+                Vector3 inputs = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+                onMoveInput?.Invoke(inputs);
             }
         }
     }
