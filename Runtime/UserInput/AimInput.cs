@@ -5,7 +5,7 @@ namespace Core.UserInput
 {
     public class AimInput : MonoBehaviour
     {
-        public UnityEvent onAimInput;
+        public UnityEvent<Vector3> onAimInput;
 
         private void Update()
         {
@@ -16,7 +16,8 @@ namespace Core.UserInput
         {
             if(Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
             {
-                onAimInput?.Invoke();
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                onAimInput?.Invoke(mousePosition);
             }
         }
     }
