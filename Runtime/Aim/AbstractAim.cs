@@ -7,6 +7,6 @@ namespace Core.Aim
     {
         [SerializeField] public UnityEvent onAim;
 
-        public abstract void Aim();
+        public abstract void Aim(Vector3 inputs);
     }
 }
